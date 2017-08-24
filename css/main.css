@@ -1,6 +1,5 @@
 /* Para Mobile */
 .container{
-    height: 1200px;
     background: #eee;
     font-family: 'Open Sans', sans-serif;
 }
@@ -42,7 +41,7 @@
 
 .slider{
     height: 600px;
-    background-image: url("../src/img/slider1.jpg");
+    /*background-image: url("../src/img/slider1.jpg");*/
     background-size: cover;
     background-position: center; 
 }
@@ -52,8 +51,66 @@
     overflow: hidden;
 }
 
-.area1{
-    height: 500px;
+.area{
+    min-height: 300px;
+}
+
+.area:nth-child(2){
+    background: #95a5a6;
+}
+
+.area:nth-child(3){
+    background: #34495e;
+}
+
+.area:nth-child(4){
+    background: #7f8c8d;
+}
+
+
+
+.box-galeria{
+
+}
+
+.imagem-galeria{
+    position: relative;
+    height: 300px;
+    display: inline-block;
+    background-size: cover;
+    background-position: center; 
+    cursor: pointer;
+}
+
+.imagem-galeria:hover{
+    animation-name: zoom;
+    animation-duration: 4s;
+}
+
+@keyframes zoom{
+    to{
+        background-size: 200%;
+    }
+}
+
+.imagem-galeria:after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    opacity: 0;
+    text-align: center;
+    line-height: 270px;
+    color: #fff;
+    content: "foto";
+    width: 100%;
+    height: 100%;
+    background: rgba(44, 62, 80, .7);
+    transition: .2s ease-in-out;
+}
+
+.imagem-galeria:hover:after{
+    opacity: 1;
 }
 
 .rodape{
@@ -87,6 +144,7 @@
         height: 60px;
         background: #fff;
         overflow: hidden;
+        z-index: 20;
     }
 
     
