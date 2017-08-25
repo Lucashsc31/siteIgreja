@@ -1,7 +1,9 @@
 /* Para Mobile */
 .container{
-    background: #eee;
-    font-family: 'Open Sans', sans-serif;
+    /* font-family: 'Open Sans', sans-serif; */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 1em;
 }
 
 .size-limit{
@@ -40,10 +42,11 @@
 }
 
 .slider{
-    height: 600px;
-    /*background-image: url("../src/img/slider1.jpg");*/
+    height: 100vh;
+    background-image: url("../src/img/slider1.jpg");
     background-size: cover;
     background-position: center; 
+    background-attachment: fixed;
 }
 
 .conteudo{
@@ -55,66 +58,173 @@
     min-height: 300px;
 }
 
-.area:nth-child(2){
-    background: #95a5a6;
+.cards{
+    background: #ecf0f1;
 }
 
-.area:nth-child(3){
-    background: #34495e;
+.card{
+    /* min-height: 300px; */
+    text-align: justify;
 }
 
-.area:nth-child(4){
-    background: #7f8c8d;
+.card h2{
+    font-size: 1.5em;
+    font-weight: bold; 
+    color: #2c3e50;
+    padding: 15px 0;
 }
 
+.card p{
+    line-height: 1.8em;
+}
 
 
 .box-galeria{
+    
+}
 
+.titulo-galeria{
+    font-size: 2em;
+    font-weight: bold; 
+    color: #2c3e50;
+    padding: 15px 0;
 }
 
 .imagem-galeria{
     position: relative;
     height: 300px;
     display: inline-block;
-    background-size: cover;
+    background-size: 150%;
     background-position: center; 
+    background-repeat: no-repeat;
     cursor: pointer;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
 .imagem-galeria:hover{
-    animation-name: zoom;
-    animation-duration: 4s;
-}
-
-@keyframes zoom{
-    to{
-        background-size: 200%;
-    }
+    background-size: 160%;
 }
 
 .imagem-galeria:after{
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
     display: block;
     opacity: 0;
-    text-align: center;
-    line-height: 270px;
-    color: #fff;
-    content: "foto";
-    width: 100%;
-    height: 100%;
-    background: rgba(44, 62, 80, .7);
-    transition: .2s ease-in-out;
+    width: 50%;
+    height: 50%;
+    outline: 2px solid #fff;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
 }
 
 .imagem-galeria:hover:after{
+    width: 85%;
+    height: 85%;
     opacity: 1;
+} 
+
+.imagem-galeria:nth-child(4), 
+.imagem-galeria:nth-child(5),
+.imagem-galeria:nth-child(6){
+    display: none;
 }
 
+.vermais-galeria{
+    position: relative;
+    display: inline-block;
+    font-size: .8em;
+    font-weight: bold; 
+    text-align: center;
+    color: #2c3e50;
+    outline: 1px solid #2c3e50;
+    padding: 15px;
+    margin: 15px 0;
+    float: right;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.vermais-galeria:hover{
+    color: #fff;
+}
+
+.vermais-galeria:after{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    display: inline-block;
+    width: 0%;
+    height: 100%;
+    background: #2c3e50;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+
+.vermais-galeria:hover:after{
+    width: 100%;
+}
+
+/* .vermais-galeria:after{
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    z-index: -1;
+    content: "";
+    display: inline-block;
+    width: 100%;
+    height: 0;
+    background: #2c3e50;
+    -webkit-transition: .2s ease-in-out;
+    transition: .2s ease-in-out;
+}
+
+.vermais-galeria:hover:after{
+    opacity: 1;
+    height: 400%;
+}  */
+
+.contato-box{
+    background: #2980b9;
+}
+
+.titulo-contato{
+    font-size: 2em;
+    font-weight: bold; 
+    color: #fff;
+    padding: 20px 0;
+}
+
+
 .rodape{
-    background: #fff;
+    background: #34495e;
+    color: #fff;
+}
+
+.rodape h3{
+    font-size: 1.3em;
+    padding: 15px 0 10px 0;
+}
+
+.rodape p{
+    line-height: 1.5em;
+}
+
+.rodape a{
+    color: #fff;
+}
+
+.rodape ul li{
+    padding: 4px 0;
 }
 
 .copy{
@@ -131,8 +241,23 @@
     color: #2980b9;
 }
 
+/* TESTE */
+.cabecalho-topo{
+    display: none !important;
+}
+
 @media only screen and (min-width: 640px) {
     /* Para tablets: */
+    .imagem-galeria{
+        height: 200px;
+    }
+
+    .imagem-galeria:nth-child(4), 
+    .imagem-galeria:nth-child(5),
+    .imagem-galeria:nth-child(6){
+        display: inline-block;
+    }
+
 
 }
 
@@ -147,6 +272,9 @@
         z-index: 20;
     }
 
+    .imagem-galeria{
+        height: 300px;
+    }
     
 
 
