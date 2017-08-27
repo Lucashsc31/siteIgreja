@@ -14,7 +14,7 @@
     <div class="row container">
 
         <header class="row cabecalho-topo">
-            <div class="content-cabecalho size-limit">
+            <div class="content-cabecalho wrapper">
                 <div class="logo"></div>
                 <ul class="menu-principal">
                     <li><a href="#">INICIO</a></li>
@@ -22,34 +22,31 @@
                     <li><a href="#">GALERIA</a></li>
                     <li><a href="#">CONTATO</a></li>
                 </ul>
-
             </div>
         </header>
 
         <main class="row conteudo">
-            <div class="row slider"> 
+            <div class="row slider"></div>
+            <div class="conteudo-slider">
+                <h1 class="titulo-principal">pib matão</h1>
             </div>
 
-            <div class="row area cards">
-                <div class="size-limit">
-                    <div class="col-4 card">
-                        <h2>LOREM IPSUM</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nisi nibh, ornare eu eleifend et, lacinia vitae ipsum. Vestibulum vel leo et nisl aliquet aliquam. Maecenas hendrerit justo vitae lobortis iaculis.</p>
-                    </div>
-                    <div class="col-4 card">
-                        <h2>LOREM IPSUM</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nisi nibh, ornare eu eleifend et, lacinia vitae ipsum. Vestibulum vel leo et nisl aliquet aliquam. Maecenas hendrerit justo vitae lobortis iaculis.</p>
-                    </div>
-                    <div class="col-4 card">
-                        <h2>LOREM IPSUM</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nisi nibh, ornare eu eleifend et, lacinia vitae ipsum. Vestibulum vel leo et nisl aliquet aliquam. Maecenas hendrerit justo vitae lobortis iaculis.</p>
+            <div class="row area box-quem-somos">
+                <div class="wrapper">
+                    <div class="background-text">
+                        <div class="col-6">
+                            <h1>Quem Somos?</h1>
+                            <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p> <p>Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p> 
+                        </div>  
+                        <div class="col-6 img-quem-somos" style="background-image: url(src/img/img3.jpg);"></div>  
                     </div>
                 </div>
             </div>
+
             <div class="row area">
-                <div class="size-limit">
-                    <div class="box-galeria">
-                        <h1 class="titulo-galeria">GALERIA</h1>
+                <div class="wrapper">
+                    <div class="col-m-12 box-galeria">
+                        <h1>Galeria</h1>
                         <div class="col-m-4 imagem-galeria" style="background-image: url(src/img/img1.jpg);">
                         </div>
                         <div class="col-m-4 imagem-galeria" style="background-image: url(src/img/img2.jpg);">
@@ -62,20 +59,39 @@
                         </div>  
                         <div class="col-m-4 imagem-galeria" style="background-image: url(src/img/img1.jpg);">
                         </div>                                                                 
-                        <p class="vermais-galeria">VER GALERIA COMPLETA</p>
+                        <p class="vermais-galeria">Ver galeria completa</p>
                     </div>
                 </div>
             </div>
 
-            <div class="row area contato-box">
-                <div class="size-limit">
-                    <h1 class="titulo-contato">CONTATO:</h1>
-                    <form action="" method="post">
-                        <input type="text" name="nome" id="" required>
-                        <input type="email" name="email" id="" required>
-                        <input type="text" name="assunto" id="">
-                        <textarea name="mensagem" id="" ></textarea>
-                    </form>
+            <div class="row area box-cards">
+                    <div class="wrapper">
+                        <div class="col-4 card">
+                            <h2>Lorem Ipsum</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nisi nibh, ornare eu eleifend et, lacinia vitae ipsum. Vestibulum vel leo et nisl aliquet aliquam. Maecenas hendrerit justo vitae lobortis iaculis.</p>
+                        </div>
+                        <div class="col-4 card">
+                            <h2>Lorem Ipsum</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nisi nibh, ornare eu eleifend et, lacinia vitae ipsum. Vestibulum vel leo et nisl aliquet aliquam. Maecenas hendrerit justo vitae lobortis iaculis.</p>
+                        </div>
+                        <div class="col-4 card">
+                            <h2>Lorem Ipsum</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nisi nibh, ornare eu eleifend et, lacinia vitae ipsum. Vestibulum vel leo et nisl aliquet aliquam. Maecenas hendrerit justo vitae lobortis iaculis.</p>
+                        </div>
+                    </div>
+                </div>
+
+            <div class="row area box-contato">
+                <div class="wrapper">
+                    <div class="col-m-12">
+                        <h1>Contato</h1>
+                        <form action="" method="post">
+                            <input type="text" name="nome" id="" required>
+                            <input type="email" name="email" id="" required>
+                            <input type="text" name="assunto" id="">
+                            <textarea name="mensagem" id="" ></textarea>
+                        </form>
+                    </div>
                 </div>
             </div>
         </main>
@@ -84,7 +100,7 @@
 
 
         <footer class="row rodape">
-            <div class="size-limit">
+            <div class="wrapper">
                 <div class="row">
                     <div class="col-m-6">
                         <h3>Lorem Ipsum</h3>
@@ -113,7 +129,7 @@
                 </div>              
             </div>
             <div class="row copy">
-                <p class="size-limit">
+                <p class="wrapper">
                     © 2017 Nome Igreja | by <a href="https://lucashsc31.github.io/" target="_blank">Lucas Henrique</a>
                 </p>
             </div>

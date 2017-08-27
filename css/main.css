@@ -6,9 +6,47 @@
     font-size: 1em;
 }
 
-.size-limit{
+h1, h2{
+    font-weight: bold; 
+    color: #2c3e50;
+    padding: 15px 0;
+} 
+
+h1{
+    font-size: 2em;
+}
+
+h2{
+    font-size: 1.5em;
+}
+
+p{
+    text-align: justify;
+    line-height: 1.8em;
+    color: #0000;
+}
+
+.conteudo{
+    height: auto;
+    overflow: hidden;
+}
+
+.area{
+    min-height: 300px;
+}
+
+.wrapper{
     max-width: 1024px;
     margin: 0 auto;
+}
+
+.cabecalho-topo{
+    display: none;
+    position: fixed;
+    height: 60px;
+    background: #fff;
+    overflow: hidden;
+    z-index: 20;
 }
 
 .logo{
@@ -19,7 +57,7 @@
 }
 
 .menu-principal{
-    float: left;
+    float: right;
     display: inline-block;
     padding: 23px 0;
     margin-left: 20px;
@@ -42,52 +80,35 @@
 }
 
 .slider{
+    position: relative;
     height: 100vh;
     background-image: url("../src/img/slider1.jpg");
     background-size: cover;
     background-position: center; 
     background-attachment: fixed;
+    filter: contrast(50%) saturate(50%);
 }
 
-.conteudo{
-    height: auto;
-    overflow: hidden;
-}
-
-.area{
-    min-height: 300px;
-}
-
-.cards{
-    background: #ecf0f1;
-}
-
-.card{
-    /* min-height: 300px; */
-    text-align: justify;
-}
-
-.card h2{
-    font-size: 1.5em;
-    font-weight: bold; 
-    color: #2c3e50;
-    padding: 15px 0;
-}
-
-.card p{
-    line-height: 1.8em;
-}
-
-
-.box-galeria{
+@keyframes animate-slider{
     
 }
 
-.titulo-galeria{
-    font-size: 2em;
-    font-weight: bold; 
-    color: #2c3e50;
-    padding: 15px 0;
+.titulo-principal{
+    position: absolute;
+    color: #fff;
+    font-size: 6em;
+    top: 70vh;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    font-family: 'Lobster', cursive;
+    text-transform: lowercase;
+    /* text-shadow: 0 0 3px #34495e; */
+}
+
+.box-cards{
+    background: #ecf0f1;
 }
 
 .imagem-galeria{
@@ -136,7 +157,7 @@
 .vermais-galeria{
     position: relative;
     display: inline-block;
-    font-size: .8em;
+    font-size: .9em;
     font-weight: bold; 
     text-align: center;
     color: #2c3e50;
@@ -193,17 +214,10 @@
     height: 400%;
 }  */
 
-.contato-box{
-    background: #2980b9;
-}
-
-.titulo-contato{
-    font-size: 2em;
-    font-weight: bold; 
-    color: #fff;
-    padding: 20px 0;
-}
-
+/* .box-contato{
+    background: #ecf0f1; 
+    border-top: 1px solid #34495e; 
+} */
 
 .rodape{
     background: #34495e;
@@ -241,11 +255,6 @@
     color: #2980b9;
 }
 
-/* TESTE */
-.cabecalho-topo{
-    display: none !important;
-}
-
 @media only screen and (min-width: 640px) {
     /* Para tablets: */
     .imagem-galeria{
@@ -263,13 +272,28 @@
 
 @media only screen and (min-width: 1024px) {
     /* Para desktop: */
+    .box-quem-somos{
+        padding: 150px 0; 
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center; 
+        background-repeat: no-repeat;
+        background-image: url("../src/img/img1.jpg");
+        filter: saturate(30%);
+    }
 
-    .cabecalho-topo{
-        position: fixed;
-        height: 60px;
+    .img-quem-somos{
+        padding-left: 20px; 
+        background-size: cover;
+        background-position: center; 
+        background-repeat: no-repeat;
+        height: 450px;
+    }
+
+    .background-text{
         background: #fff;
-        overflow: hidden;
-        z-index: 20;
+        padding: 35px;
+        display: inline-block;
     }
 
     .imagem-galeria{
