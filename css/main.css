@@ -35,6 +35,11 @@ p{
     min-height: 300px;
 }
 
+/* Para Mobile */
+[class*="box-"] {
+    padding: 35px;
+}
+
 .wrapper{
     max-width: 1024px;
     margin: 0 auto;
@@ -107,8 +112,11 @@ p{
     /* text-shadow: 0 0 3px #34495e; */
 }
 
-.box-cards{
-    background: #ecf0f1;
+.img-quem-somos{
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: 300px;
 }
 
 .imagem-galeria{
@@ -219,6 +227,10 @@ p{
     border-top: 1px solid #34495e; 
 } */
 
+.box-cards{
+    background: #ecf0f1;
+}
+
 .rodape{
     background: #34495e;
     color: #fff;
@@ -279,27 +291,37 @@ p{
         background-position: center; 
         background-repeat: no-repeat;
         background-image: url("../src/img/img1.jpg");
-        filter: saturate(30%);
+        /* filter: saturate(30%); */
     }
 
     .img-quem-somos{
-        padding-left: 20px; 
-        background-size: cover;
-        background-position: center; 
-        background-repeat: no-repeat;
         height: 450px;
     }
 
-    .background-text{
+    .background-box{
         background: #fff;
-        padding: 35px;
         display: inline-block;
+    }
+
+    .pattern-padding{
+        padding: 0 15px;
     }
 
     .imagem-galeria{
         height: 300px;
     }
     
-
-
+    /* .box-cards{
+        padding: 150px 0; 
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center; 
+        background-repeat: no-repeat;
+        background-image: url("../src/img/img2.jpg");
+        filter: saturate(30%);
+    }
+    
+    .card{
+        background: #fff;
+    } */
 }
