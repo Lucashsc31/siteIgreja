@@ -21,9 +21,19 @@ h2{
 }
 
 p{
-    text-align: justify;
     line-height: 1.8em;
     color: #0000;
+}
+
+.pattern-padding{
+    padding: 0 7.5px;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -80px;
+    visibility: hidden;
 }
 
 .conteudo{
@@ -31,57 +41,190 @@ p{
     overflow: hidden;
 }
 
+.conteudo::after{
+    content: "";
+    clear: both;
+}
+
 .area{
     min-height: 300px;
 }
 
-/* Para Mobile */
-[class*="box-"] {
-    padding: 35px;
-}
-
 .wrapper{
+    position: relative;
     max-width: 1024px;
     margin: 0 auto;
+    clear: both;
+}
+
+.modal{
+    display: none;
+    z-index: 50;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal.is-open{
+    display: block;
+}
+
+.modal>.imagem{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 80%;
+    height: 80%;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
 
 .cabecalho-topo{
-    display: none;
+    z-index: 15;
     position: fixed;
-    height: 60px;
-    background: #fff;
+    height: 80px;
     overflow: hidden;
-    z-index: 20;
 }
 
-.logo{
+.invertido .logo-cabecalho{
+    background-image: url("../src/img/logomarcaEscuro.png");
+    background-size: contain;
+    background-position: fixed;
+    background-repeat: no-repeat;
+    margin: 5px 0 0 15px;
+    height: 80px;
+    width: 80px;
     float: left;
-    height: 60px;
-    width: 100px;
-    background: #34495e;
+}
+
+.nome-cabecalho{
+    display: none;
+}
+
+.invertido .nome-cabecalho{
+    display: inline-block;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 80px;
+    color: #2C3E50;
+}
+
+.open-menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 15px;
+    padding: 15px;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+    transition: .2s;
+    font-weight: bold;
+}
+
+.open-menu:hover{
+    background: #2c3e50;
+    color: #fff;
+    border: 1px solid #2c3e50;
+}
+
+.cabecalho-topo.invertido{
+    background: #fff;
+    box-shadow: 0 0 1px #000;
+}
+
+.cabecalho-topo.invertido .open-menu{
+    color: #2c3e50;
+    border: 1px solid #2c3e50;
+}
+
+.cabecalho-topo.invertido .open-menu:hover{
+    background: #2c3e50;
+    color: #fff;
+    border: 1px solid #2c3e50;
 }
 
 .menu-principal{
+    overflow: hidden;
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+    height: 0%;
+    background: #fff;
+    transition: .5s;
+}
+
+.menu-principal.is-open{
+    width: 100%;
+    height: 100%;
+}
+
+.close-menu{
+    position: relative;
+    z-index: 25;
+    background-image: url("../src/img/closeEscuro.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 15px;
+    width: 7%;
+    height: 7%;
     float: right;
-    display: inline-block;
-    padding: 23px 0;
-    margin-left: 20px;
+    cursor: pointer;
 }
 
-.menu-principal li{
-    display: inline;
+.menu-principal ul{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: .5s;
 }
 
-.menu-principal li>a{
+.menu-principal.is-open ul{
+    opacity: 1;
+}
+
+.menu-principal ul li{
+    margin: 30px 0;
+}
+
+.menu-principal ul li a{
+    position: relative;
+    z-index: 1;
     text-decoration: none;
     color: #2c3e50;
-    font-size: 1em;
-    padding: 33px 15px;
+    font-size: 10vw;
+    padding: 0 4vw;
     transition: .2s;
 }
 
-.menu-principal li>a:hover{
-    background: #eee;
+.menu-principal ul li a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: inline-block;
+    z-index: -1;
+    width: 0;
+    height: 100%;
+    background: #2c3e50;
+    transition: .2s;
+}
+
+.menu-principal ul li a:hover{
+    color: #fff;
+}
+
+.menu-principal ul li a:hover::after{
+    left: 0;
+    width: 100%;
 }
 
 .slider{
@@ -91,26 +234,54 @@ p{
     background-size: cover;
     background-position: center; 
     background-attachment: fixed;
-    filter: contrast(50%) saturate(50%);
 }
 
 @keyframes animate-slider{
     
 }
 
-.titulo-principal{
+.conteudo-slider{
     position: absolute;
-    color: #fff;
-    font-size: 6em;
-    top: 70vh;
+    top: 50%;
+    height: 50%;
+    width: 50%;
     transform: translateY(-50%);
     width: 100%;
-    text-align: center;
     bottom: 0;
-    font-family: 'Lobster', cursive;
+}
+
+.logo-principal{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url("../src/img/logoBranco.png");  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.titulo-principal{
+    text-align: center;
+    color: #fff;
+    font-size: 8vh;
+    /* font-family: 'Lobster', cursive; */
     text-transform: lowercase;
     /* text-shadow: 0 0 3px #34495e; */
 }
+
+.conteudo-slider-min{
+    top: 70%;
+}
+
+.slider-min{
+    height: 300px;
+    background-image: url("../src/img/slider1.jpg");
+}
+
+.titulo-principal-min{
+    top: 50%;
+}
+
 
 .img-quem-somos{
     background-size: cover;
@@ -162,10 +333,10 @@ p{
     display: none;
 }
 
-.vermais-galeria{
+.botao-principal{
+    z-index: 1;
     position: relative;
     display: inline-block;
-    font-size: .9em;
     font-weight: bold; 
     text-align: center;
     color: #2c3e50;
@@ -177,13 +348,14 @@ p{
     overflow: hidden;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
+    text-decoration: none;
 }
 
-.vermais-galeria:hover{
+.botao-principal:hover{
     color: #fff;
 }
 
-.vermais-galeria:after{
+.botao-principal::after{
     z-index: -1;
     position: absolute;
     top: 0;
@@ -197,11 +369,11 @@ p{
     transition: .2s ease-in-out;
 }
 
-.vermais-galeria:hover:after{
+.botao-principal:hover::after{
     width: 100%;
 }
 
-/* .vermais-galeria:after{
+/* .botao-principal:after{
     position: absolute;
     opacity: 0;
     top: 50%;
@@ -217,7 +389,7 @@ p{
     transition: .2s ease-in-out;
 }
 
-.vermais-galeria:hover:after{
+.botao-principal:hover:after{
     opacity: 1;
     height: 400%;
 }  */
@@ -230,6 +402,56 @@ p{
 .box-cards{
     background: #ecf0f1;
 }
+
+.box-cards.white{
+    background: #fff;
+}
+
+.box-cards h1{
+    padding-left: 15px; 
+}
+
+.box-cards .botao-principal{
+    margin-right: 15px;
+}
+
+.link-card>.card>p{
+    color: #000;
+}  
+
+.link-card:hover>.card>p{
+    text-decoration: underline;
+} 
+
+.card-image{
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.contato-form input, .contato-form textarea{    
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 15px;
+}
+
+.contato-form textarea { 
+    font-family: 'Poppins', sans-serif;
+    resize: vertical;
+    min-height: 250px;
+}
+
+.contato-form input[type="submit"]{ 
+    background: #34495e;
+    border: none;
+    padding: 10px;
+    font-size: 1.5em;
+    color: #fff;
+    cursor: pointer;
+}
+
 
 .rodape{
     background: #34495e;
@@ -269,6 +491,14 @@ p{
 
 @media only screen and (min-width: 640px) {
     /* Para tablets: */
+    .invertido .nome-cabecalho{
+        font-size: 2.5em;
+    }
+
+    [class*="box-"] {
+        padding: 35px;
+    }
+
     .imagem-galeria{
         height: 200px;
     }
@@ -284,6 +514,10 @@ p{
 
 @media only screen and (min-width: 1024px) {
     /* Para desktop: */
+    .open-menu{
+        margin-right: 0;
+    }
+
     .box-quem-somos{
         padding: 150px 0; 
         background-size: cover;
@@ -294,8 +528,12 @@ p{
         /* filter: saturate(30%); */
     }
 
+    .box-quem-somos p, .box-quem-somos h1{
+        padding: 10px 20px 0 20px;
+    }
+
     .img-quem-somos{
-        height: 450px;
+        height: 460px;
     }
 
     .background-box{

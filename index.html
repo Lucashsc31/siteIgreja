@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Template</title>
     <!--CSS-->
     <link href="css/fonts.css" rel="stylesheet"/>
@@ -13,27 +14,41 @@
 <body>
     <div class="row container">
 
-        <header class="row cabecalho-topo">
+        <div class="js-modal modal">
+            <div class="js-imagem imagem"></div>
+        </div>
+
+        <div class="js-menu-principal menu-principal">
+            <span class="js-close-menu close-menu"></span>
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li><a href="publicacoes.html">PUBLICAÇÕES</a></li>
+                <li><a href="galeria.html">GALERIA</a></li>
+                <li><a href="index.html#sobre">SOBRE NÓS</a></li>
+                <li><a href="index.html#contato">CONTATO</a></li>
+            </ul>
+        </div>
+
+
+        <header class="js-cabecalho-topo row cabecalho-topo">
             <div class="content-cabecalho wrapper">
-                <div class="logo"></div>
-                <ul class="menu-principal">
-                    <li><a href="#">INICIO</a></li>
-                    <li><a href="#">SOBRE</a></li>
-                    <li><a href="#">GALERIA</a></li>
-                    <li><a href="#">CONTATO</a></li>
-                </ul>
+                <div class="logo-cabecalho"></div>
+                <div class="nome-cabecalho">pib matao</div>
+                <div class="js-open-menu open-menu">MENU</div>
             </div>
         </header>
 
         <main class="row conteudo">
-            <div class="row slider"></div>
-            <div class="conteudo-slider">
-                <h1 class="titulo-principal">pib matão</h1>
+            <div class="js-slider row slider">
+                <div class="conteudo-slider">
+                    <div class="logo-principal"></div>
+                </div>
             </div>
 
+            <a class="anchor" id="sobre"></a>
             <div class="row area box-quem-somos">
                 <div class="wrapper">
-                    <div class="background-box pattern-padding">
+                    <div class="background-box">
                         <div class="col-6">
                             <h1>Quem Somos?</h1>
                             <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. </p> <p>Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p> 
@@ -46,18 +61,29 @@
             <div class="row area box-cards">
                 <div class="wrapper">
                     <div class="pattern-padding">
-                        <div class="col-4 card">
-                            <h2>Lorem Ipsum</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nisi nibh, ornare eu eleifend et, lacinia vitae ipsum. Vestibulum vel leo et nisl aliquet aliquam. Maecenas hendrerit justo vitae lobortis iaculis.</p>
-                        </div>
-                        <div class="col-4 card">
-                            <h2>Lorem Ipsum</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nisi nibh, ornare eu eleifend et, lacinia vitae ipsum. Vestibulum vel leo et nisl aliquet aliquam. Maecenas hendrerit justo vitae lobortis iaculis.</p>
-                        </div>
-                        <div class="col-4 card">
-                            <h2>Lorem Ipsum</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nisi nibh, ornare eu eleifend et, lacinia vitae ipsum. Vestibulum vel leo et nisl aliquet aliquam. Maecenas hendrerit justo vitae lobortis iaculis.</p>
-                        </div>
+                        <h1>Publicacoes</h1>
+                        <a href="publicacao.html" class="link-card">
+                            <div class="col-4 card">
+                                <div class="card-image" style="background-image: url(src/img/img1.jpg);"></div>
+                                <h2>Lorem Ipsum</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nisi nibh, ornare eu eleifend et, lacinia vitae ipsum. Vestibulum vel leo et nisl aliquet aliquam. Maecenas hendrerit justo vitae lobortis iaculis.</p>
+                            </div>
+                        </a>
+                        <a href="publicacao.html" class="link-card">
+                            <div class="col-4 card">
+                                <div class="card-image" style="background-image: url(src/img/img1.jpg);"></div>
+                                <h2>Lorem Ipsum</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nisi nibh, ornare eu eleifend et, lacinia vitae ipsum. Vestibulum vel leo et nisl aliquet aliquam. Maecenas hendrerit justo vitae lobortis iaculis.</p>
+                            </div>
+                        </a>
+                        <a href="publicacao.html" class="link-card">
+                            <div class="col-4 card">
+                                <div class="card-image" style="background-image: url(src/img/img1.jpg);"></div>
+                                <h2>Lorem Ipsum</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nisi nibh, ornare eu eleifend et, lacinia vitae ipsum. Vestibulum vel leo et nisl aliquet aliquam. Maecenas hendrerit justo vitae lobortis iaculis.</p>
+                            </div>
+                        </a>
+                        <a href="publicacoes.html" class="botao-principal">Ver todas publicacoes</a>
                     </div>
                 </div>
             </div>
@@ -78,19 +104,22 @@
                         </div>  
                         <div class="col-m-4 imagem-galeria" style="background-image: url(src/img/img1.jpg);">
                         </div>                                                                 
-                        <p class="vermais-galeria">Ver galeria completa</p>
+                        <a href="galeria.html" class="botao-principal">Ver galeria completa</a>
                     </div>
                 </div>
             </div>
 
+            <a class="anchor" id="contato"></a>
             <div class="row area box-contato">
                 <div class="wrapper pattern-padding">
                     <h1>Contato</h1>
-                    <form action="" method="post">
-                        <input type="text" name="nome" id="" required>
-                        <input type="email" name="email" id="" required>
-                        <input type="text" name="assunto" id="">
-                        <textarea name="mensagem" id="" ></textarea>
+                    <p>Entre em contato conosco atraves do formulario abaixo:</p>
+                    <form action="" method="post" class="contato-form">
+                        <input type="text" placeholder="Digite seu nome" name="nome" id="" required>
+                        <input type="email" placeholder="Digite seu email" name="email" id="" required>
+                        <input type="text" placeholder="Digite o assunto" name="assunto" id="">
+                        <textarea name="mensagem" id="" placeholder="Digite a Mensagem"></textarea>
+                        <input type="submit" value="Enviar"/>
                     </form>
                 </div>
             </div>
