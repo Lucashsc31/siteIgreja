@@ -35,10 +35,10 @@ window.onload = function(){
     for(i=0; i<imagensGaleria.length; i++){
         imagensGaleria[i].addEventListener("click", function(e){
             if(window.outerWidth > 640){
-                imagemModal.style.backgroundImage = e.target.style.backgroundImage;
+                imagemModal.style.backgroundImage = this.style.backgroundImage;
                 modal.classList.add("is-open");
             }
-        });
+        }.bind(imagensGaleria[i]));
     }
 
     modal.addEventListener("click", function(){
