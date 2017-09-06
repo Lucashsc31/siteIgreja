@@ -8,6 +8,7 @@
 
 a{
     text-decoration: none !important;
+    color: #2c3e50;
 }
 
 h1, h2{
@@ -507,6 +508,7 @@ a.anchor {
 
 .rodape p{
     line-height: 1.5em;
+    color: #fff;
 }
 
 .rodape a{
