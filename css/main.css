@@ -1,7 +1,7 @@
 /* Para Mobile */
 .container{
     /* font-family: 'Open Sans', sans-serif; */
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI';
     font-weight: 200;
     font-size: 1em;
 }
