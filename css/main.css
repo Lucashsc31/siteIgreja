@@ -6,6 +6,10 @@
     font-size: 1em;
 }
 
+a{
+    text-decoration: none !important;
+}
+
 h1, h2{
     font-weight: bold; 
     color: #2c3e50;
@@ -18,6 +22,10 @@ h1{
 
 h2{
     font-size: 1.5em;
+}
+
+h3{
+    font-size: 1.2em;
 }
 
 p{
@@ -369,6 +377,7 @@ a.anchor {
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
     text-decoration: none;
+    clear: both;
 }
 
 .botao-principal:hover{
@@ -448,6 +457,19 @@ a.anchor {
     height: 200px;
     background-size: cover;
     background-position: center;
+}
+
+.card-ministerio{
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+}
+
+.card-ministerio .thumb-image{
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .contato-form input, .contato-form textarea{    
